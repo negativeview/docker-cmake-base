@@ -40,4 +40,4 @@ jobs:
       
       - name: Push image
         run: |
-          docker push ghcr.io/$GIBHUB_ACTOR/cmake-base:latest
+          docker push ghcr.io/$GITHUB_ACTOR/cmake-base:latest
