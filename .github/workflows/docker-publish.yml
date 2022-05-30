@@ -32,7 +32,7 @@ jobs:
       
       - name: Build image
         run: |
-          docker build --tag ghcr.io/$GITHUB_ACTOR/cmake-base:$(echo $GITHUB_SHA | head -c7) --tag ghcr.io/$GITHUB_ACTOR/cmake-base:latest .
+          docker build --tag ghcr.io/$GITHUB_ACTOR/cmake-base:latest .
       
       - name: Docker login
         run: >-
@@ -40,5 +40,5 @@ jobs:
       
       - name: Push image
         run: |
-          docker push ghcr.io/$GITHUB_ACTOR/cmake-base:$(echo $GITHUB_SHA | head -c7)
+          # docker push ghcr.io/$GITHUB_ACTOR/cmake-base:$(echo $GITHUB_SHA | head -c7)
           docker push ghcr.io/$GIBHUB_ACTOR/cmake-base:latest
